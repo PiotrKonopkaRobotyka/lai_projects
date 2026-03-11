@@ -1,0 +1,43 @@
+# Source ROS 2 Jazzy environment
+source /opt/ros/jazzy/setup.bash
+
+# Enable colcon command completion
+source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
+
+# Custom prompt with ROS distro indicator
+PS1='\[\033[01;32m\]\u@docker(jazzy)\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+# Python aliases
+alias python='python3'
+alias pip='pip3'
+
+# Shortcuts to course directories
+alias cdpy='cd ~/workspace/python_course'
+alias cdcpp='cd ~/workspace/cpp_course'
+alias cdlinux='cd ~/workspace/linux'
+
+# ROS shortcuts
+alias cdros='cd ~/workspace/ros2_projects'
+alias cb='colcon build'
+alias cbt='colcon build --symlink-install'
+alias cbp='colcon build --packages-select'
+
+# Common aliases
+alias ll='ls -alFh'
+alias la='ls -A'
+alias l='ls -CF'
+alias ..='cd ..'
+alias ...='cd ../..'
+
+# Development helpers
+alias gpp='g++ -std=c++17 -Wall -Wextra'
+alias pyrun='python3'
+
+# Greeting message
+echo "╔════════════════════════════════════════╗"
+echo "║  LAI Workspace - ROS 2 Development     ║"
+echo "╠════════════════════════════════════════╣"
+echo "║  ROS:    Jazzy Jalisco                 ║"
+echo "║  Python: python3.12.3                  ║"
+echo "║  GCC:    gcc 13.3.0                    ║"
+echo "╚════════════════════════════════════════╝"
